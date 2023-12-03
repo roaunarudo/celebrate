@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>Celebrate</title>
+    <link rel="stylesheet" href="./celebrate.css">
+    <link href="https://fonts.cdnfonts.com/css/gill-sans-2" rel="stylesheet">
+</head>
+<body>
+
+    <div id="top-nav">
+        <img src="./image/logo/logo_color.png" alt="">
+        <ul id="menu1">
+            <p>Home</p>
+            <p>About</p>
+            <p>Service</p>
+            <p>Contact</p>
+        </ul>
+
+    </div>
+
+    <div id="home-section2">
+
+        <div id="carousal">
+            <img src="./image/home/home-img-1.png" alt="">
+            <img src="./image/home/home-img-2.png" alt="">
+            <img src="./image/home/home-img-3.png" alt="">
+            <img src="./image/home/home-img-4.png" alt="">
+            <img src="./image/home/home-img-5.png" alt="">
+            <img src="./image/home/home-img-6.png" alt="">
+
+        </div>
+        
+
+    </div>
+
+    <div id="home-section3">
+
+        <div class="home-section3-1">
+            <p class="h2">About Us</p>
+            <p class="copy">Celebrate Ltd is a company based in New Zealand that specializes in exporting high-quality products that are highly valued in the international market. We are passionate about delivering exceptional products and services that meet the unique needs of each of our clients. We are proud to be your trusted partner in sourcing top-tier products from New Zealand. With Celebrate Ltd, you can have confidence that you are receiving only the best products that New Zealand has to offer.</p>
+        </div>
+        <!----
+        <div class="home-section3-2">
+            <img src="./image/home/home-img-7.png" alt="">
+        </div>
+        -->
+
+
+    </div>
+
+    <div id="home-section4"> 
+
+        <div class="contact-img">
+
+            <img src="./image/home/home-img-8.png" alt="">
+
+        </div>
+        
+
+        <div class="getintouch">
+            <p>Get In Touch</p>
+            <form id="formdata" action="https://formsubmit.co/[email protected]" method="POST">
+
+                <div class="input-group">
+                    <input type="text" name="Name" placeholder="NAME" minlength="2" id="name" onkeyup="validateName()">
+                    <span id="name-error"></span>
+                </div>
+                <div class="input-group">
+                    <input type="email" name="Email" placeholder="EMAIL" required id="email" onkeyup="validateEmail()">
+                    <span id="email-error"></span>
+                </div>
+                <div class="input-group">
+                    <input type="tel" name="Phone" placeholder="PHONE" minlength="10" >
+                    
+
+                </div>
+                <div class="input-group">
+                    <textarea name="Message" cols="30" rows="12" placeholder="MESSAGE" required id="message" onkeyup="validateMessage()"></textarea>
+                    <span id="message-error"></span>
+                    
+                </div>
+                
+                
+                <button type="submit" value="send" id="sendBtn">Send</button>
+
+            </form>
+
+        </div>
+        
+
+    </div>
+    <footer>
+        <div>
+
+        </div>
+        <div>
+            
+        </div>
+    </footer>
+
+
+<script src="./celebrate.js"></script>
+
+</body>
+</html>
