@@ -1,3 +1,6 @@
+
+//-------------------------------------------All about form-------------------------------------------
+
 var nameError=document.getElementById("name-error");
 var emailError=document.getElementById("email-error");
 var messageError=document.getElementById("message-error");
@@ -89,3 +92,65 @@ f.addEventListener("submit", function(event){
     }
 
 });
+
+//-------------------------------------------Image Carousal-------------------------------------------
+
+/*(function(){
+var slide=document.querySelectorAll(".cimg");
+var len=slide.length;
+var counter=1;
+
+if(counter<=len){
+
+    setInterval(function() {
+
+        for(var i=0;i<len;i++){
+
+            if(slide[i].classList.length == 1){
+
+                slide[i].classList.add("hide");
+                console.log("hi"); 
+                if(i == (len-1)){
+                    slide[0].classList.remove("hide");
+                    
+                }
+                else{
+                    slide[i+1].classList.remove("hide");
+                }
+                
+            }
+            
+
+        }
+        counter++;
+  
+        if (counter === len) {
+          counter = 1;
+        }
+      }, 4000);
+}
+})();*/
+
+var firstIndex=0;
+function automaticSlide(){
+
+    setTimeout(automaticSlide, 2500);
+
+    var pics;
+    const img=document.querySelectorAll(".cimg");
+    for(pics=0;pics<img.length;pics++){
+        //img[pics].style.display="none";
+        img[pics].classList.add("hide");
+
+    }
+    firstIndex++;
+    if(firstIndex>img.length){
+        firstIndex=1;
+    }
+    //img[firstIndex-1].style.display="block";
+    img[firstIndex-1].classList.remove("hide");
+    img[firstIndex-1].classList.add("see");
+    
+
+}
+automaticSlide();

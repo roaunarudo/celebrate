@@ -1,6 +1,10 @@
 *{
     margin: 0;
     padding: 0;
+    
+}
+br{
+    display: none;
 }
 body{
 
@@ -12,6 +16,7 @@ html{
 
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 
 }
 
@@ -53,14 +58,61 @@ html{
     font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif; 
     text-transform: uppercase;
 }
+#home-section2{
+
+width: 100%;
+position: relative;
+   
+   
+}
+.home-section2-1{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    padding-right: 25%;
+}
+.home-section2-11{
+
+    color: #ffffff;
+    font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif; 
+    font-size: 5rem;
+    padding-bottom: 1rem;
+    font-weight: 500;
+   /* text-shadow: 1px 1px 1px black;*/
+
+}
+.home-section2-22{
+
+    padding: 1em 1rem;
+    width: 25%;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing: 0.05rem;
+    cursor: pointer;
+    background-color: #00B7D3;
+    color: #000066;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
+
+
+}
 
 #carousal{
+    
+    width: 100%;
+    display: flex;
+    
+}
+.cimg{
 
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: auto;
-    overflow: hidden;
-    justify-content: center;
+    width: 100%;
+    
 }
 
 #home-section3{
@@ -237,14 +289,21 @@ input, textarea{
 }
 #sendBtn:hover{
 
-    background-color: #00B7D3;
-    color: #000066;
+    background-color: #000066;
+    color: #00B7D3;
 }
 .hide{
 
     display: none;
+    opacity: 0;
+    transition: 200ms opacity ease-in-out;
+    transition-delay: 200ms;
 }
+.see{
 
+    opacity:1;
+    transition-delay: 0ms;
+}
 
 @media (max-width:767px){
 
@@ -261,6 +320,54 @@ input, textarea{
     .getintouch{
 
         width: 95%;
+    }
+    #top-nav img{
+
+        width: 11rem;
+        position: absolute;
+        left: 5%;
+        top: 50%;
+        transform: translateY(-50%);
+    
+    }
+    .home-section2-1{
+        top: 25%;
+        padding-right: 5%;
+    }
+    .home-section2-11{
+
+        
+        font-size: 3.5rem;
+        padding-bottom: 1rem;
+        
+    
+    }
+    br{
+        display: inline;
+    }
+    .home-section2-22{
+    
+        
+        width: 45%;
+    
+    }
+    
+    #carousal{
+        
+        
+        height: 60vh;
+        
+    }
+    .cimg{
+        object-fit: cover;
+        object-position: center;
+
+    }
+    .home-section3-1{
+
+        
+        padding: 0 9%;
+        
     }
 
 
