@@ -77,10 +77,12 @@ f.setAttribute("novalidate", "");
 
 f.addEventListener("submit", function(event){
 
-
-    if(validateForm=="true"){
+    
+    if(validateForm() == true){
+        console.log("hi");
 
         f.submit();
+        console.log("hi");
     }
     else{
         event.preventDefault();
