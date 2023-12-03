@@ -85,8 +85,8 @@ position: relative;
 }
 .home-section2-22{
 
-    padding: 1em 1rem;
-    width: 25%;
+    padding: 1rem 1rem;
+    width: 20%;
     text-transform: uppercase;
     font-size: 1.1rem;
     font-weight: 400;
@@ -292,6 +292,25 @@ input, textarea{
     background-color: #000066;
     color: #00B7D3;
 }
+
+footer{
+
+    height: 5rem;
+    background-color: #000045;
+}
+.home-section5-3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+
+
+}
+footer p{
+    color: #e6e6e6;
+    
+
+}
 .hide{
 
     display: none;
@@ -331,6 +350,7 @@ input, textarea{
     
     }
     .home-section2-1{
+
         top: 25%;
         padding-right: 5%;
     }
@@ -348,7 +368,7 @@ input, textarea{
     .home-section2-22{
     
         
-        width: 45%;
+        width: 50%;
     
     }
     
@@ -370,6 +390,9 @@ input, textarea{
         
     }
 
+    #sendBtn{
 
+        width: 50%;
+    }
 
 }
