@@ -75,23 +75,31 @@ function validateForm(){
 
 }
 
-var f=document.getElementById("formdata");
-f.setAttribute("novalidate", "");
 
-f.addEventListener("submit", function(event){
+
+var f=document.getElementById("formdata");
+if(f){
+
+   f.setAttribute("novalidate", "");
+   f.addEventListener("submit", function(event){
 
     
     if(validateForm() == true){
-        console.log("hi");
+        
 
         f.submit();
-        console.log("hi");
+        
     }
     else{
         event.preventDefault();
     }
 
 });
+
+}
+
+
+
 
 //-------------------------------------------Image Carousal-------------------------------------------
 
@@ -153,4 +161,39 @@ function automaticSlide(){
     
 
 }
-automaticSlide();
+
+
+//-------------------------Burger Menu---------------------
+
+const menuBtn=document.getElementById("menu-icon");
+let menuOpen=false;
+
+menuBtn.addEventListener("click",function(){
+    
+
+    if(!menuOpen){
+
+        menuBtn.classList.add("open");
+        menuOpen=true;
+        document.getElementById("menu2").classList.remove("hide-menu");
+        document.getElementById("menu2").classList.add("menu-active");
+        
+        document.body.style="overflow:hidden";
+    }
+    else{
+
+        menuBtn.classList.remove("open");
+        menuOpen=false;
+        document.getElementById("menu2").classList.add("hide-menu");
+        document.getElementById("menu2").classList.remove("menu-active");
+        document.body.style="overflow:none";
+
+    }
+
+});
+
+function contact(){
+    document.getElementById("menu2").classList.add("hide-menu");
+    document.body.style="overflow:none";
+    menuBtn.classList.remove("open");
+}
