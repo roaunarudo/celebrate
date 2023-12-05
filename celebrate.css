@@ -246,7 +246,7 @@ position: relative;
     display: flex;
     align-items: center;
     padding: 2.5rem 0;
-    background-color: #ffffff;
+    background-color: #000066;
 }
 
 .home-section3-1{
@@ -445,7 +445,7 @@ input, textarea{
     justify-content: center;
     align-items: center;
     padding: 4rem 5%;
-    background-color: #e6e6e6;
+    /*background-color: #e6e6e6;*/
 }
 .about-section3-1{
 
@@ -663,7 +663,7 @@ footer{
     }
     .about-section2-1{
 
-        height: 60vh;
+        height: 25vh;
     }
     .about-section2-1 img{
 
