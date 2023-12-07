@@ -23,6 +23,7 @@ html{
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+    box-sizing: border-box;
 
 }
 /*------------Top Nav------------*/
@@ -143,14 +144,25 @@ html{
     height: 100vh;
     background-color: #00B7D3;
     position: relative;
-    left: 100%;
     justify-content: center;
+    left: 100%;
+    transition-property: left;
+    transition-duration: 500ms;
+
+
+}
+
+#menu2.menu-active{
+
     
-    /*transition-property: left;
-    transition-duration: 3s;*/
-    transition: left ease 0.5s;
+    left: 0;
 
+}
 
+.hide-menu{
+
+    display: none;
+    left: 100%;
 }
 
 #menu2 p{
@@ -174,6 +186,8 @@ html{
     gap: 2rem;
     padding-top:15rem;
     align-items: center;
+    transition-property: transform;
+    transition-duration: 3s;
     
 }
 
@@ -245,23 +259,35 @@ position: relative;
     
     display: flex;
     align-items: center;
-    padding: 2.5rem 0;
+    padding: 2.5rem 5%;
     background-color: #000066;
 }
 
 .home-section3-1{
 
     display: inline;
-    padding: 0 5%;
     
 }
 .h2{
 
-    font-size: 2.25rem;
+    font-size: 2rem;
     color: #00B7D3;
     font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif; 
-
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
     
+}
+
+.h3{
+
+    font-size: 1.75rem;
+    font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif; 
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    font-weight: 500;
+    color: #ffffff;
+
+
 }
 .home-section3-1 .h2{
 
@@ -276,7 +302,7 @@ position: relative;
 
     text-align: justify;
     padding: 2.5rem 0;
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     color: #e6e6e6;
     font-weight: 200;
     letter-spacing: 0.05rem;
@@ -424,7 +450,7 @@ input, textarea{
 
 }
 
-.about-section2-11{
+.about-section2-1 .h2{
 
     position: absolute;
     top:50%;
@@ -447,47 +473,140 @@ input, textarea{
     padding: 4rem 5%;
     /*background-color: #e6e6e6;*/
 }
+
 .about-section3-1{
 
+    width: 50%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 75%;
-    
-   
 }
 .about-section3-1 img{
 
-    width: 100%;
-    
-   /* border-radius: 0.15rem;*/
+
+    width:100%;
+    border-radius: 50%;
 }
 
 .about-section3-2{
 
     display: flex;
     flex-direction: column;
-    gap: 2rem;
     width: 100%;
-    padding-left: 5%;
+    margin-left: 5%;
     
 }
 .about-section3-2 p{
 
     display: flex;
     text-align: justify;    
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     font-weight: 300;
     letter-spacing: 0.05rem;
     font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
     
 }
 
-.about-section3-22{
+
+
+#about-section4{
+
+    max-width:100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.about-section4-1{
+
+    display: flex;
+    position: absolute;
+    display: flex;
+    gap: 10rem;
+    padding: 0 5%;
+}
+.about-section4-1 div{
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+.about-section4-1 div .copy{
+
+    text-align: justify;
+    font-size: 1.25rem;
+    color: #ffffff;
+    font-weight: 200;
+   /* letter-spacing: 0.05rem;*/
+    font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif; 
+}
+.about-section4-2{
+
+    width: 100%;
+    display: flex;
+}
+.about-section4-2 img{
+
+    width: 100%;
+    
+ }
+
+#about-section5{
+
+    width: 100%;
+    
+}
+.about-section5-1{
+
+    display: flex;
+    width: 100%;
+    position: relative;
+
+}
+
+.about-section5-1 .h2{
+    
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #ffffff;
+}
+
+.about-section5-1 img{
+    width: 100%;
+}
+
+.about-section5-2{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    padding: 4rem 5%;
+    gap: 2rem;
+    
+}
+.about-section5-2 .copy{
+
+    text-align: justify;
+    font-size: 1.25rem;
+    color: #000045;
+    font-weight: 200;
+   /* letter-spacing: 0.05rem;*/
+    font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif; 
+    
+}
+
+.about-section5-2 button{
     
 
     padding: 1rem 1rem;
-    width: 30%;
+    width: 100%;
     text-transform: uppercase;
     font-size: 1.1rem;
     font-weight: 400;
@@ -501,7 +620,6 @@ input, textarea{
     border-radius: 0.25rem;
     font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
 }
-
 
 /*--------------------Footer---------------*/
 footer{
@@ -544,19 +662,9 @@ footer{
 
     transition: all 0.5s ease-in-out;
 }
-.hide-menu{
 
-    display: none;
-}
 
-#menu2.menu-active{
 
-    left: 0;
-    /*transition-property: left;
-    transition-duration: 3s;*/ 
-    transition: left ease 0.5s;
-    
-}
 
 .see{
 
@@ -635,31 +743,13 @@ footer{
     .home-section3-1{
 
         
-        padding: 0 9%;
+        padding: 0;
         
     }
 
     #sendBtn{
 
         width: 50%;
-    }
-
-    #about-section3{
-
-        flex-direction: column;
-        padding: 4rem 10%;
-        
-        
-    }
-    .about-section3-1{
-        width: 100%;
-        
-    }
-    .about-section3-1 img{
-
-        border-radius: 0.5rem;
-        height: 25rem;
-        object-fit: cover;
     }
     .about-section2-1{
 
@@ -669,17 +759,57 @@ footer{
 
         object-fit: cover;
     }
-    .about-section3-2{
-        gap: 2rem;
-        align-items: center;
-        padding-top: 3rem;
+
+
+    #about-section3{
+
+        flex-direction: column;
+        padding: 4rem 5%;
+        margin:0;
     }
-    .about-section3-2 p{
-        padding-right: 5%;
+    .about-section3-1{
+       display: none;
         
     }
-    .about-section3-22{
+   
+    .about-section3-2{
+        align-items: center;
+        margin: 0;
+    }
+    
+    .about-section4-1{
+        gap: 2rem;
+        padding: 0 10%;
+    }
+    
+    .about-section4-2{
+
+        height:90vh;
+    }
+
+    .about-section4-2 img{
+
+        object-fit: cover;
+    }
+
+    .about-section4-1{
+
+        flex-direction: column;
+    }
+
+    .about-section5-1{
+
+        height: 25vh;
+    }
+    
+    .about-section5-1 img{
+
+        object-fit: cover;
+    }
+    .about-section5-2 button{
         width: 100%;
     }
+
+
 
 }
