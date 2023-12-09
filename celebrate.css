@@ -331,20 +331,27 @@ position: relative;
 
 #home-section4{
 
+    max-width:100%;
     position: relative;
-    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
 }
 
 .contact-img{
 
-
    width: 100%; 
    display: flex;
-   justify-content: center;
-    
     
 }
+
+.contact-img img{
+
+    width: 100%;
+}
+
+
 
 .getintouch{
 
@@ -352,13 +359,13 @@ position: relative;
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 47.5%;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%,-50%);
     justify-content: center;
     width: 50%;
     align-items: center;
-    gap: 6rem;
+    gap: 2.5rem;
 
 
 
@@ -754,6 +761,14 @@ footer{
         
         padding: 0;
         
+    }
+    .contact-img{
+
+        height: 50rem;
+    }
+    .contact-img img{
+
+        object-fit: cover;
     }
 
     #sendBtn{
