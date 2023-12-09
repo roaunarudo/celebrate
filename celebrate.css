@@ -203,6 +203,7 @@ position: relative;
 .home-section2-1{
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     position: absolute;
     top: 30%;
     left: 5%;
@@ -215,15 +216,15 @@ position: relative;
     font-size: 5rem;
     padding-bottom: 1rem;
     font-weight: 500;
-   /* text-shadow: 1px 1px 1px black;*/
+    text-shadow: 0 0.075rem 0.075rem #000000;
 
 }
 .home-section2-22{
 
-    padding: 1rem 1rem;
-    width: 25%;
+    padding: 1rem 1.5rem;
+    width: 100%;
     text-transform: uppercase;
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     font-weight: 400;
     letter-spacing: 0.05rem;
     cursor: pointer;
@@ -234,7 +235,8 @@ position: relative;
     cursor: pointer;
     border-radius: 0.25rem;
     font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
-    box-shadow: 1rem 1rem 5 #000045;
+    box-shadow: 0 0.075rem 0.075rem #000000;
+    
 
 }
 
@@ -275,6 +277,8 @@ position: relative;
     font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif; 
     text-transform: uppercase;
     letter-spacing: 0.05rem;
+    font-weight: 500;
+    text-shadow: 0 0.075rem 0.075rem #000000;
     
 }
 
@@ -284,8 +288,9 @@ position: relative;
     font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif; 
     text-transform: uppercase;
     letter-spacing: 0.05rem;
-    font-weight: 500;
+    font-weight: 400;
     color: #ffffff;
+
 
 
 }
@@ -304,7 +309,7 @@ position: relative;
     padding: 2.5rem 0;
     font-size: 1.25rem;
     color: #e6e6e6;
-    font-weight: 200;
+    font-weight: 100;
     letter-spacing: 0.05rem;
     font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif; 
 }
@@ -373,9 +378,9 @@ form{
 
     display: flex;
     flex-direction: column;
-    width: 65%;
-    gap: 1.5rem;
+    align-items: flex-start;
     width: 75%;
+    gap: 1.5rem;
     
 }
 
@@ -417,11 +422,11 @@ input, textarea{
 }
 
 #sendBtn{
-
-    padding: 0.75rem 1rem;
+    
+    padding: 1rem 1rem;
     width: 35%;
     text-transform: uppercase;
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     font-weight: 400;
     letter-spacing: 0.05rem;
     cursor: pointer;
@@ -432,6 +437,7 @@ input, textarea{
     cursor: pointer;
     border-radius: 0.25rem;
     font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
+    box-shadow: 0 0.075rem 0.075rem #000000;
 }
 #sendBtn:hover{
 
@@ -468,40 +474,47 @@ input, textarea{
     
     max-width: 100%;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 4rem 5%;
+    gap: 4rem;
+    position: relative;
     /*background-color: #e6e6e6;*/
 }
 
 .about-section3-1{
 
-    width: 50%;
+    width: 35%;
     display: flex;
+    justify-content: center;
+
 }
 .about-section3-1 img{
 
 
     width:100%;
     border-radius: 50%;
+    /*border: 5px solid #ffffff;*/
+   
 }
 
 .about-section3-2{
 
     display: flex;
-    flex-direction: column;
     width: 100%;
-    margin-left: 5%;
+   /* margin-left: 5%;*/
+   
     
 }
-.about-section3-2 p{
+.about-section3-2 .copy{
 
-    display: flex;
-    text-align: justify;    
+    text-align: justify;
     font-size: 1.25rem;
-    font-weight: 300;
-    letter-spacing: 0.05rem;
-    font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
+    color: #1a1a1a;
+    font-weight: 200;
+   /* letter-spacing: 0.05rem;*/
+    font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif; 
     
 }
 
@@ -532,7 +545,7 @@ input, textarea{
     flex-direction: column;
     gap: 1rem;
     justify-content: center;
-    align-items: center;
+    align-items:flex-start;
 }
 .about-section4-1 div .copy{
 
@@ -595,7 +608,7 @@ input, textarea{
 
     text-align: justify;
     font-size: 1.25rem;
-    color: #000045;
+    color: #1a1a1a;
     font-weight: 200;
    /* letter-spacing: 0.05rem;*/
     font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif; 
@@ -605,10 +618,10 @@ input, textarea{
 .about-section5-2 button{
     
 
-    padding: 1rem 1rem;
+    padding: 1rem 1.5rem;
     width: 100%;
     text-transform: uppercase;
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     font-weight: 400;
     letter-spacing: 0.05rem;
     cursor: pointer;
@@ -619,6 +632,7 @@ input, textarea{
     cursor: pointer;
     border-radius: 0.25rem;
     font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
+    box-shadow: 0 0.075rem 0.075rem #000000;
 }
 
 /*--------------------Footer---------------*/
@@ -690,7 +704,7 @@ footer{
 
     .getintouch{
 
-        width: 95%;
+        width: 100%;
     }
     #top-nav img{
 
@@ -722,12 +736,7 @@ footer{
     br{
         display: inline;
     }
-    .home-section2-22{
     
-        
-        width: 50%;
-    
-    }
     
     #carousal{
         
@@ -780,6 +789,11 @@ footer{
     .about-section4-1{
         gap: 2rem;
         padding: 0 10%;
+    }
+    
+    .about-section4-1 div{
+
+        align-items:center;
     }
     
     .about-section4-2{
