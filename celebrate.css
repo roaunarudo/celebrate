@@ -14,6 +14,8 @@ body{
 
     margin: 0;
     padding: 0;
+    height: 100%;
+    max-width: 100%;
     /*overflow: hidden;*/
     
 }
@@ -24,7 +26,9 @@ html{
     padding: 0;
     scroll-behavior: smooth;
     box-sizing: border-box;
-
+    height: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 /*------------Top Nav------------*/
 #top-nav{
@@ -33,6 +37,7 @@ html{
     width: 100%;
     height: 5rem;
     position: relative;
+    z-index: 15;
     
 
    
@@ -143,26 +148,28 @@ html{
     width: 100vw;
     height: 100vh;
     background-color: #00B7D3;
-    position: relative;
+    position: absolute;
     justify-content: center;
-    left: 100%;
+    /*left: 100%;
     transition-property: left;
-    transition-duration: 500ms;
-
+    transition-duration: 500ms;*/
+    z-index: 10;
 
 }
 
 #menu2.menu-active{
 
-    
+    opacity: 1;
     left: 0;
+    transition: all 500ms ease-in-out;
 
 }
 
 .hide-menu{
-
-    display: none;
-    left: 100%;
+    visibility: hidden;
+    transform: translateX(100%);
+    transition: all 500ms ease-in-out;
+    
 }
 
 #menu2 p{
@@ -195,10 +202,9 @@ html{
 
 #home-section2{
 
-width: 100%;
-position: relative;
-   
-   
+    width: 100%;
+    min-height: min-content;
+
 }
 
 .home-section2-1{
@@ -206,9 +212,11 @@ position: relative;
     flex-direction: column;
     align-items: flex-start;
     position: absolute;
-    top: 30%;
+    top: 40%;
     left: 5%;
-    padding-right:25%;
+    margin-right:5%;
+    padding-right: 25%;
+    z-index: 5;
 }
 
 .home-section2-11{
@@ -244,18 +252,38 @@ position: relative;
 
 #carousal{
     
-    width: 100%;
+    max-width: 100%;
+    height: fit-content;
     display: flex;
+    min-height: min-content;
+    position: relative;
     
 }
-.cimg{
 
-    width: 100%;
+.cimg{
+    
+    
+    min-height: min-content;
+    position: absolute;
+    inset: 0; 
+    opacity: 1;
+    transition: all 500ms ease-in-out;
+    transform: translateX(0);
+
+    /*
+    max-width: 100%;
     opacity: 1;
     transition: transform 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
-    transform: translate("0");
+    transform: translate("0");*/
     
+}
+.cimg img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 #home-section3{
@@ -343,14 +371,18 @@ position: relative;
 
 .contact-img{
 
-   width: 100%; 
+   width: 100%;
    display: flex;
+   
     
 }
 
 .contact-img img{
 
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+   object-position: center;
 }
 
 
@@ -475,7 +507,7 @@ input, textarea{
 }
 .about-section2-1 img{
     width: 100%;
-    /*object-fit: cover;*/
+    object-fit: cover;
 
 }
 
@@ -572,6 +604,7 @@ input, textarea{
 .about-section4-2 img{
 
     width: 100%;
+    object-fit: cover;
     
  }
 
@@ -673,47 +706,39 @@ footer{
 /*----------------Miscellaneous--------------*/
 .hide{
 
-    display: none;
     opacity: 0;
+    transition-delay: 0ms;
+    transition: all 500ms ease-in-out;
+    transition-delay: 200ms;
+    /*opacity: 0;
     transition-property: display;
     transition-duration: 0.5s;
-    /*opacity: 0;
+    opacity: 0;
     transition: 200ms opacity ease-in-out;
     transition-delay: 200ms;
-    transform: translateX(-50%);*/
+    transform: translateX(-50%);
 
-    transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;*/
 }
 
 
-
-
-.see{
-
-    opacity:1;
-    transition-delay: 0ms;
-}
 .flow{
 
     overflow: hidden;
 }
 
-@media (max-width:767px){
+.holder{
+    visibility:hidden; width: 100%; height: 100%; display: flex;
+}
 
-    html{
 
-        font-size: 14px;
-    }
+@media (max-width:1224px){
 
-    #menu1{
+    html{font-size: 14px;}
 
-        display: none;
-    }
 
-    .getintouch{
+    .getintouch{width: 60%;}
 
-        width: 100%;
-    }
     #top-nav img{
 
         width: 13rem;
@@ -723,68 +748,129 @@ footer{
         transform: translateY(-50%);
     
     }
-    #menu-icon{
-
-        visibility: visible;
-    }
     
-    .home-section2-1{
+    .home-section2-1{top: 35%; margin-right:5%; padding-right: 25%;}
 
-        top: 25%;
-        padding-right: 5%;
+    .home-section2-11{ font-size: 5rem; padding-bottom: 1rem;}
+
+    br{ display: none;}
+    
+    #carousal{ height: 80vh;}
+
+    .cimg{ height: 80vh;}
+    
+    .home-section3-1{padding: 0;}
+
+    .contact-img{ height: 50rem;}
+
+    .about-section2-1{ height: 45vh;}
+
+    .about-section3-2{ align-items: center; margin: 0;}
+    
+    .about-section4-1{ gap: 5rem; padding: 0 10%;}
+    
+    .about-section4-1 div{ align-items:center;}
+    
+    .about-section4-2{ height:60vh;}
+
+    .about-section5-1{ height: 25vh;}
+    
+    .holder{
+        display: none;
     }
-    .home-section2-11{
 
-        
-        font-size: 3.5rem;
-        padding-bottom: 1rem;
-        
+
+}
+
+@media (max-width:1024px){
+
+    html{font-size: 14px;}
+
+
+    .getintouch{width: 70%;}
+
+    #top-nav img{
+
+        width: 13rem;
+        position: absolute;
+        left: 5%;
+        top: 50%;
+        transform: translateY(-50%);
     
     }
-    br{
-        display: inline;
-    }
+
     
+    .home-section2-1{top: 35%; margin-right:5%; padding-right: 15%;}
+
+    .home-section2-11{ font-size: 5rem; padding-bottom: 1rem;}
+
+    br{ display: none;}
     
-    #carousal{
-        
-        
-        height: 60vh;
-        
-    }
-    .cimg{
-        object-fit: cover;
-        object-position: center;
+    #carousal{ height: 80vh;}
 
-    }
-    .home-section3-1{
+    .cimg{ height: 80vh;}
+    
+    .home-section3-1{padding: 0;}
 
-        
-        padding: 0;
-        
-    }
-    .contact-img{
+    .contact-img{ height: 50rem;}
 
-        height: 50rem;
-    }
-    .contact-img img{
+    .about-section2-1{ height: 35vh;}
 
-        object-fit: cover;
+    .about-section3-2{ align-items: center; margin: 0;}
+    
+    .about-section4-1{ gap: 5rem; padding: 0 10%;}
+    
+    .about-section4-1 div{ align-items:center;}
+    
+    .about-section4-2{ height:60vh;}
+
+    .about-section5-1{ height: 25vh;}
+    
+    .holder{
+        display: none;
     }
 
-    #sendBtn{
 
-        width: 50%;
+}
+
+
+
+@media (max-width:767px){
+
+    html{font-size: 14px;}
+
+    #menu1{ display: none;}
+
+    .getintouch{width: 100%;}
+
+    #top-nav img{
+
+        width: 13rem;
+        position: absolute;
+        left: 5%;
+        top: 50%;
+        transform: translateY(-50%);
+    
     }
-    .about-section2-1{
+    #menu-icon{ visibility: visible;}
+    
+    .home-section2-1{top: 25%; margin-right:5%; padding-right: 5%;}
 
-        height: 25vh;
-    }
-    .about-section2-1 img{
+    .home-section2-11{ font-size: 3.5rem; padding-bottom: 1rem;}
 
-        object-fit: cover;
-    }
+    br{ display: inline;}
+    
+    #carousal{ height: 60vh;}
 
+    .cimg{ height: 60vh;}
+    
+    .home-section3-1{padding: 0;}
+
+    .contact-img{ height: 50rem;}
+
+    
+
+    .about-section2-1{ height: 25vh;}
 
     #about-section3{
 
@@ -792,54 +878,25 @@ footer{
         padding: 4rem 5%;
         margin:0;
     }
-    .about-section3-1{
-       display: none;
-        
-    }
+    .about-section3-1{ display: none;}
    
-    .about-section3-2{
-        align-items: center;
-        margin: 0;
-    }
+    .about-section3-2{ align-items: center; margin: 0;}
     
-    .about-section4-1{
-        gap: 2rem;
-        padding: 0 10%;
-    }
+    .about-section4-1{ gap: 2rem; padding: 0 10%;}
     
-    .about-section4-1 div{
-
-        align-items:center;
-    }
+    .about-section4-1 div{ align-items:center;}
     
-    .about-section4-2{
+    .about-section4-2{ height:90vh;}
 
-        height:90vh;
-    }
+    .about-section4-1{ flex-direction: column;}
 
-    .about-section4-2 img{
-
-        object-fit: cover;
-    }
-
-    .about-section4-1{
-
-        flex-direction: column;
-    }
-
-    .about-section5-1{
-
-        height: 25vh;
-    }
+    .about-section5-1{ height: 25vh;}
     
-    .about-section5-1 img{
-
-        object-fit: cover;
+    .holder{
+        display: none;
     }
-    .about-section5-2 button{
-        width: 100%;
-    }
-
 
 
 }
+
+

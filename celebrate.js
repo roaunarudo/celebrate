@@ -157,7 +157,6 @@ function automaticSlide(){
     }
     //img[firstIndex-1].style.display="block";
     img[firstIndex-1].classList.remove("hide");
-    img[firstIndex-1].classList.add("see");
     
 
 }
