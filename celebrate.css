@@ -730,7 +730,7 @@ footer{
 .holder{
     visibility:hidden; width: 100%; height: 100%; display: flex;
 }
-
+@media (max-width:50000px){#menu2{display: none;}}
 
 @media (max-width:1224px){
 
@@ -748,7 +748,7 @@ footer{
         transform: translateY(-50%);
     
     }
-    
+    #menu2{display: none;}
     .home-section2-1{top: 35%; margin-right:5%; padding-right: 25%;}
 
     .home-section2-11{ font-size: 5rem; padding-bottom: 1rem;}
@@ -798,7 +798,7 @@ footer{
         transform: translateY(-50%);
     
     }
-
+    #menu2{display: none;}
     
     .home-section2-1{top: 35%; margin-right:5%; padding-right: 15%;}
 
@@ -837,6 +837,8 @@ footer{
 
 @media (max-width:767px){
 
+   
+
     html{font-size: 14px;}
 
     #menu1{ display: none;}
@@ -852,6 +854,7 @@ footer{
         transform: translateY(-50%);
     
     }
+    #menu2{display: block;}
     #menu-icon{ visibility: visible;}
     
     .home-section2-1{top: 25%; margin-right:5%; padding-right: 5%;}
