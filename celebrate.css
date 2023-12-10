@@ -28,7 +28,6 @@ html{
     box-sizing: border-box;
     height: 100%;
     max-width: 100%;
-    overflow-x: hidden;
 }
 /*------------Top Nav------------*/
 #top-nav{
@@ -166,8 +165,8 @@ html{
 }
 
 .hide-menu{
+
     visibility: hidden;
-    transform: translateX(100%);
     transition: all 500ms ease-in-out;
     
 }
